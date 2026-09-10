@@ -33,7 +33,7 @@ jobs:
       - name: Run Pytest
         env:
           ACCOUNT_NUMBER: ${{ secrets.ACCOUNT_NUMBER }}
-          LOGIN_USERNAME: ${{ secrets.LOGIN_USERNAME }}
-          LOGIN_PASSWORD: ${{ secrets.LOGIN_PASSWORD }}
+          LOGIN_USERNAME: ${{ secrets.USERNAME }}
+          LOGIN_PASSWORD: ${{ secrets.PASSWORD }}
         run: |
           PYTHONPATH=. pytest --alluredir=allure-results

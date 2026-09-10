@@ -7,8 +7,8 @@ def get_login_data():
     if os.getenv("CI") == "true":
         data = {
             "account_number": os.getenv("ACCOUNT_NUMBER"),
-            "username": os.getenv("LOGIN_USERNAME"),
-            "password": os.getenv("LOGIN_PASSWORD")
+            "username": os.getenv("USERNAME"),
+            "password": os.getenv("PASSWORD")
         }
 
         print("CI credentials loaded:")
