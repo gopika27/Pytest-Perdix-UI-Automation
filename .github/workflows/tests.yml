@@ -31,5 +31,9 @@ jobs:
           playwright install --with-deps chromium
 
       - name: Run Pytest
+        env:
+          ACCOUNT_NUMBER: ${{ secrets.ACCOUNT_NUMBER }}
+          LOGIN_USERNAME: ${{ secrets.LOGIN_USERNAME }}
+          LOGIN_PASSWORD: ${{ secrets.LOGIN_PASSWORD }}
         run: |
           PYTHONPATH=. pytest --alluredir=allure-results
