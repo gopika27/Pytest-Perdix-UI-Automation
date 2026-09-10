@@ -32,4 +32,4 @@ jobs:
 
       - name: Run Pytest
         run: |
-          pytest --alluredir=allure-results
+          PYTHONPATH=. pytest --alluredir=allure-results
